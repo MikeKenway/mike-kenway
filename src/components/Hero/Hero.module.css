@@ -1,9 +1,44 @@
-.hero {
-  display: grid;
-  padding: 8rem 4rem;
+.heroWrap {
+  display: block;
+  padding: 4rem 4rem;
   background: var(--smoke-950);
   color: white;
   text-align: center;
+  max-width: 1200px;
+}
+
+.heroWrap p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.heroItem {
+  display: flex;
+  flex-direction: column;
+  justify-items: left;
+  text-align: left;
+  font-size: 18px;
+}
+
+.heroImg {
+ position: relative;
+ aspect-ratio: 1 / 1;
+ display: block;
+ align-items: center;
+ justify-items: center;
+ width: 100%;
+ overflow: hidden; 
+}
+
+.heroText {
+  padding: 32px 0px;
+
 }
 
 .title {
@@ -14,11 +49,13 @@
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: .9rem;
   font-weight: 400;
-  color: var(--text-light);
+  color: var(--smoke-300);
+  text-transform: uppercase;
   margin-bottom: 2.5rem;
   line-height: 1.6;
+  margin-top: -1rem;
 }
 
 .actions {

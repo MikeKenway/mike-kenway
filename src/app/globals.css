@@ -70,11 +70,13 @@ a {
   }
 }
 
+
 .primaryBtn {
   background-color: var(--ekko-600);
   padding: 12px 20px;
   font-size: 18px;
   border: none;
+  text-transform: uppercase;
 }
 
 .primaryBtn:hover {
@@ -83,8 +85,23 @@ a {
   color: #ffffff;
 }
 
+.secondaryBtn {
+
+  padding: 12px 20px;
+  font-size: 18px;
+  border: 2px;
+  border-color: var(--ekko-600);
+  border-style: solid;
+  text-transform: uppercase;
+}
+
+
 .container {
   width: 100%;
   max-width: 1200px;
+}
+
+.image-cover {
+  object-fit: cover;
 }
 
