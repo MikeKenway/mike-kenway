@@ -48,7 +48,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Helvetica, Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -70,13 +70,23 @@ a {
   }
 }
 
+main {
+  width: 100%;
+}
+
 
 .primaryBtn {
   background-color: var(--ekko-600);
   padding: 12px 20px;
   font-size: 18px;
-  border: none;
+  font-family: 'Roboto',  Helvetica, Arial, sans-serif;
+  border: solid;
+  border-color: var(--ekko-600);
   text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1.2;
+
 }
 
 .primaryBtn:hover {
@@ -93,6 +103,15 @@ a {
   border-color: var(--ekko-600);
   border-style: solid;
   text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.secondaryBtn:hover {
+  background-color: var(--ekko-900);
+  border-color: var(--ekko-900);
+  transition: 200ms ease-in-out;
+  color: #ffffff;
 }
 
 
@@ -105,3 +124,6 @@ a {
   object-fit: cover;
 }
 
+.image-contain {
+  object-fit: contain;
+}

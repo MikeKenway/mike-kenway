@@ -43,7 +43,7 @@
 
 }
 
-.navLinks :global(a):hover:not(:global(.primaryBtn)) {
+.navLinks:hover {
   color: var(--ekko-300);
   transition: color 200ms ease-in-out;
 }

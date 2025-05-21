@@ -3,8 +3,9 @@
   padding: 4rem 4rem;
   background: var(--smoke-950);
   color: white;
-  text-align: center;
   max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .heroWrap p {
@@ -30,7 +31,7 @@
 .heroImg {
  position: relative;
  aspect-ratio: 1 / 1;
- display: block;
+ display: flex;
  align-items: center;
  justify-items: center;
  width: 100%;
@@ -65,4 +66,21 @@
   gap: 1rem;
   justify-content: left;
   flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .heroGrid {
+    grid-template-columns: 1fr;     /* switch to 1 column */
+  }
+
+  .heroItem {
+    order: 2;  /* move text below image if you want to */
+  }
+
+  .heroImg {
+    order: 1;  /* move image above text */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
 }

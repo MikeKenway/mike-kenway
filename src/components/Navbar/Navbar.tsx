@@ -32,7 +32,7 @@ export default function Navbar() {
               href='/contact'
               className='primaryBtn'
             >
-              Let’s Chat
+              Get in Touch
             </Link>
           </ul>
         </nav>

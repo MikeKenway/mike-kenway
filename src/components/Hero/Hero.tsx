@@ -1,5 +1,3 @@
-// Hero.tsx
-
 import styles from './Hero.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,9 +8,9 @@ export default function Hero() {
       <div className={styles.heroGrid}>
         {/* Left Grid Column – Text */}
         <div className={styles.heroItem}>
- <div>
+          <div>
             <h1 className={styles.heroTitle}>Hi! I'm Kenway.</h1>
-  
+
             <p className={styles.heroSubtitle}>
               UX/UI Designer • Creative Director • Founder
             </p>
@@ -20,7 +18,7 @@ export default function Hero() {
               I design scalable systems and thoughtful experiences <br />
               that drive clarity, growth, and momentum.
             </p>
- </div>
+          </div>
           <div className={styles.actions}>
             <Link
               href='/cases'
@@ -32,22 +30,22 @@ export default function Hero() {
               href='/contact'
               className='secondaryBtn'
             >
-              Let’s Talk
+              Get in Touch
             </Link>
           </div>
         </div>
 
         {/* Right Grid Column – Image */}
         <div className={styles.heroImg}>
-          <div className='image-cover'>
-            <Image
-              src='/images/kenway.jpg'
-              alt='headshot photo of Mike Kenway'
-              width={1000}
-              height={1000}
-              priority
-            />
-          </div>
+          <Image
+            src='/images/kenway.jpg'
+            alt='headshot photo of Mike Kenway'
+            fill
+            priority
+            style={{
+              objectFit: 'contain',
+            }}
+          />
         </div>
       </div>
     </section>
