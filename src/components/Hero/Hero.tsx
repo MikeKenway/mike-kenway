@@ -10,15 +10,17 @@ export default function Hero() {
       <div className={styles.heroGrid}>
         {/* Left Grid Column – Text */}
         <div className={styles.heroItem}>
-          <h1 className={styles.title}>Hi! I'm Kenway.</h1>
-
-          <p className={styles.subtitle}>
-            UX/UI Designer • Creative Director • Founder
-          </p>
-          <p className={styles.heroText}>
-            I design scalable systems and thoughtful experiences <br />
-            that drive clarity, growth, and momentum.
-          </p>
+ <div>
+            <h1 className={styles.heroTitle}>Hi! I'm Kenway.</h1>
+  
+            <p className={styles.heroSubtitle}>
+              UX/UI Designer • Creative Director • Founder
+            </p>
+            <p className={styles.heroText}>
+              I design scalable systems and thoughtful experiences <br />
+              that drive clarity, growth, and momentum.
+            </p>
+ </div>
           <div className={styles.actions}>
             <Link
               href='/cases'

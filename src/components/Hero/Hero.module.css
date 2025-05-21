@@ -24,6 +24,7 @@
   justify-items: left;
   text-align: left;
   font-size: 18px;
+  justify-content: space-between;
 }
 
 .heroImg {
@@ -38,17 +39,18 @@
 
 .heroText {
   padding: 32px 0px;
+  font-size: 20px;
 
 }
 
-.title {
+.heroTitle {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.3;
 }
 
-.subtitle {
+.heroSubtitle {
   font-size: .9rem;
   font-weight: 400;
   color: var(--smoke-300);
@@ -61,6 +63,6 @@
 .actions {
   display: flex;
   gap: 1rem;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
 }
