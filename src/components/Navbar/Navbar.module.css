@@ -1,0 +1,49 @@
+
+.navWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: var(--smoke-950);
+  border-bottom: 1px solid var(--smoke-200);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;                  /* ✅ centers the nav inside wrapper */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--smoke-950);
+}
+
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+
+}
+
+.navLinks :global(a):hover:not(:global(.primaryBtn)) {
+  color: var(--ekko-300);
+  transition: color 200ms ease-in-out;
+}
