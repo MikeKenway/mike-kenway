@@ -1,0 +1,43 @@
+/* Base card styling */
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0; /* light border */
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    max-width: 570px;
+    gap: 1rem;
+    align-items: start;
+    color: #fff;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+  
+  /* Hover effects */
+  .card:hover {
+    border-color: var(--accent-400);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: 150ms ease-in-out;
+  }
+  
+  .cardImg {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }

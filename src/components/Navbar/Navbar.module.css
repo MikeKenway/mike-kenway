@@ -11,10 +11,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;                  /* ✅ centers the nav inside wrapper */
+ /* max-width: 1200px; */
+  margin: 0 auto;                 
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 10rem;
   background-color: var(--smoke-950);
 }
 
@@ -43,7 +43,20 @@
 
 }
 
-.navLinks:hover {
+.navLinks a:hover:not(.primaryBtn) {
   color: var(--ekko-300);
   transition: color 200ms ease-in-out;
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+}
+
+.logoName {
+  color: var(--white);
+  font-size: 36px;
+  font-weight: 600;
 }

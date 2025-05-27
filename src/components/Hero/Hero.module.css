@@ -1,86 +1,104 @@
 .heroWrap {
-  display: block;
-  padding: 4rem 4rem;
-  background: var(--smoke-950);
+  width: 100vw;
+  padding: 10rem 5vw;
   color: white;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+  overflow: hidden;
 }
 
 .heroWrap p {
   margin-bottom: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .heroGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  align-items: center;
 }
 
 .heroItem {
   display: flex;
   flex-direction: column;
-  justify-items: left;
   text-align: left;
-  font-size: 18px;
   justify-content: space-between;
+  height: 100%;
 }
 
-.heroImg {
- position: relative;
- aspect-ratio: 1 / 1;
- display: flex;
- align-items: center;
- justify-items: center;
- width: 100%;
- overflow: hidden; 
-}
-
-.heroText {
-  padding: 32px 0px;
-  font-size: 20px;
-
+.heroTitleWrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .heroTitle {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.3;
+  font-size: 7rem;
+  font-weight: 800;
+  line-height: 1.1;
+  background: linear-gradient(90deg, #5f5df3 0%, var(--accent-500) 100%);
+  margin-bottom: 1rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heroSubtitle {
-  font-size: .9rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  color: var(--smoke-300);
   text-transform: uppercase;
-  margin-bottom: 2.5rem;
-  line-height: 1.6;
+  color: var(--smoke-300);
   margin-top: -1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.heroText {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--smoke-100);
+}
+
+.actionsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .actions {
   display: flex;
-  gap: 1rem;
-  justify-content: left;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-@media (max-width: 768px) {
+.heroImg {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
   .heroGrid {
-    grid-template-columns: 1fr;     /* switch to 1 column */
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .heroItem {
-    order: 2;  /* move text below image if you want to */
+    align-items: center;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
   }
 
   .heroImg {
-    order: 1;  /* move image above text */
-    display: flex;
+    height: 400px;
+    margin-top: 3rem;
+  }
+
+  .actions {
     justify-content: center;
-    margin-bottom: 2rem;
   }
 }

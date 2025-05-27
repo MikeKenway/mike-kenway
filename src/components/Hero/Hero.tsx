@@ -1,44 +1,57 @@
 import styles from './Hero.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import Status from '../Status/Status'
 
 export default function Hero() {
   return (
     <section className={styles.heroWrap}>
       <div className={styles.heroGrid}>
-        {/* Left Grid Column – Text */}
         <div className={styles.heroItem}>
-          <div>
+          <div className={styles.heroTitleWrap}>
             <h1 className={styles.heroTitle}>Hi! I'm Kenway.</h1>
 
             <p className={styles.heroSubtitle}>
               UX/UI Designer • Creative Director • Founder
             </p>
-            <p className={styles.heroText}>
-              I design scalable systems and thoughtful experiences <br />
-              that drive clarity, growth, and momentum.
-            </p>
           </div>
+
+          <p className={styles.heroText}>
+            As a Designer with over 10 years of experience, I design scalable
+            systems and thoughtful experiences that drive clarity, growth, and
+            momentum.
+          </p>
+          <p className={styles.heroText}>
+            My "books" are currently: <Status />
+          </p>
           <div className={styles.actions}>
             <Link
               href='/cases'
-              className='primaryBtn'
+              passHref
+              legacyBehavior
             >
-              See My Work
+              <a className='heroPrimaryBtn'>
+                See My Work
+                <div className='border-anim'>
+                  <span className='top'></span>
+                  <span className='right'></span>
+                  <span className='bottom'></span>
+                  <span className='left'></span>
+                </div>
+              </a>
             </Link>
             <Link
               href='/contact'
-              className='secondaryBtn'
+              className='heroSecondaryBtn'
             >
               Get in Touch
+              <span className='border-draw'></span>
             </Link>
           </div>
         </div>
-
-        {/* Right Grid Column – Image */}
         <div className={styles.heroImg}>
           <Image
-            src='/images/kenway.jpg'
+            src='/images/portsiteprofile.jpg'
             alt='headshot photo of Mike Kenway'
             fill
             priority

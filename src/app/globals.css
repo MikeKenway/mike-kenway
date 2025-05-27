@@ -1,35 +1,48 @@
 :root {
-  --background: var(--smoke-200);
+  --background: var(--smoke-900);
   --foreground: #161616;
 
   --black: #020202;
+  --white: #ffffff;
 
   --smoke-950: #161616;
-  --smoke-900: #3d3d3d;
-  --smoke-800: #454545;
+  --smoke-900: #212121;
+  --smoke-800: #383838;
   --smoke-700: #4f4f4f;
-  --smoke-600: #5d5d5d;
-  --smoke-500: #6d6d6d;
-  --smoke-400: #888888;
-  --smoke-300: #b0b0b0;
-  --smoke-200: #d1d1d1;
-  --smoke-100: #e7e7e7;
-  --smoke-50: #f6f6f6;
+  --smoke-600: #696969;
+  --smoke-500: #808080;
+  --smoke-400: #969696;
+  --smoke-300: #adadad;
+  --smoke-200: #c4c4c4;
+  --smoke-100: #dbdbdb;
+  --smoke-50: #e8e8e8;
 
-  --ekko-950: #241a4c;
-  --ekko-900: #3c2c83;
-  --ekko-800: #462ea5;
-  --ekko-700: #5635cd;
-  --ekko-600: #613fe8;
-  --ekko-500: #7260f4;
-  --ekko-400: #847efb;
-  --ekko-300: #a3a6fe;
-  --ekko-200: #c6c9ff;
-  --ekko-100: #dfe2ff;
-  --ekko-50: #eef0ff;
+  --ekko-50: #f1f1fe;
+  --ekko-100: #e3e3fd;
+  --ekko-200: #cccbfb;
+  --ekko-300: #b0aef9;
+  --ekko-400: #9392f7;
+  --ekko-500: #7c7af5;
+  --ekko-600: #5f5df3;
+  --ekko-700: #1511e9;
+  --ekko-800: #0e0c9d;
+  --ekko-900: #07064c;
+  --ekko-950: #030326;
 
-  --nice: #042069;
-  --nicer: #696969;
+  --accent-50: #fff0f7;
+  --accent-100: #ffe5f1;
+  --accent-200: #ffc7e1;
+  --accent-300: #ffadd3;
+  --accent-400: #ff8fc3;
+  --accent-500: #ff75b5;
+  --accent-600: #ff298d;
+  --accent-700: #e00069;
+  --accent-800: #940045;
+  --accent-900: #4d0024;
+  --accent-950: #240011;
+
+  --nice-420: #042069;
+  --nice-069: #696969;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,7 +61,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Inter', Helvetica, Arial,sans-serif;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -74,50 +87,13 @@ main {
   width: 100%;
 }
 
-
-.primaryBtn {
-  background-color: var(--ekko-600);
-  padding: 12px 20px;
-  font-size: 18px;
-  font-family: 'Roboto',  Helvetica, Arial, sans-serif;
-  border: solid;
-  border-color: var(--ekko-600);
-  text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: 1.2;
-
-}
-
-.primaryBtn:hover {
-  background-color: var(--ekko-500);
-  transition: color 200ms ease-in-out;
-  color: #ffffff;
-}
-
-.secondaryBtn {
-
-  padding: 12px 20px;
-  font-size: 18px;
-  border: 2px;
-  border-color: var(--ekko-600);
-  border-style: solid;
-  text-transform: uppercase;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.secondaryBtn:hover {
-  background-color: var(--ekko-900);
-  border-color: var(--ekko-900);
-  transition: 200ms ease-in-out;
-  color: #ffffff;
-}
-
-
 .container {
   width: 100%;
   max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .image-cover {
@@ -126,4 +102,195 @@ main {
 
 .image-contain {
   object-fit: contain;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.heroPrimaryBtn {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(
+    90deg,
+    var(--ekko-600),
+    var(--accent-500)
+  ); /* 🔥 Static gradient */
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 2px transparent;
+  transition: color 0.25s;
+  overflow: hidden;
+}
+
+/* Drawn border setup */
+.heroPrimaryBtn::before,
+.heroPrimaryBtn::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-radius: inherit;
+  bottom: 0;
+  right: 0;
+}
+
+/* Bottom-left corner draw */
+.heroPrimaryBtn::before {
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+/* Top-right corner draw */
+.heroPrimaryBtn::after {
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+/* Hover: draw the border only */
+.heroPrimaryBtn:hover::before,
+.heroPrimaryBtn:hover::after {
+  border-color: white;
+  transition: border-color 0s, width 0.35s, height 0.15s;
+  width: 100%;
+  height: 100%;
+}
+
+.heroPrimaryBtn:hover::before {
+  transition-delay: 0s, 0.15s, 0.35s;
+}
+
+.heroPrimaryBtn:hover::after {
+  transition-delay: 0.15s, 0.25s, 0s;
+}
+
+.heroSecondaryBtn {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 2px transparent;
+  transition: color 0.25s ease;
+}
+
+/* Gradient border layer behind the animated border */
+.heroSecondaryBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  padding: 2px; /* thickness of the gradient border */
+  background: linear-gradient(90deg, var(--ekko-600), var(--accent-500));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Drawn white border using same technique as primary */
+.heroSecondaryBtn::after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-radius: inherit;
+  bottom: 0;
+  right: 0;
+}
+
+.heroSecondaryBtn::after {
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+/* Add bottom-left corner as separate layer */
+.heroSecondaryBtn::before,
+.heroSecondaryBtn::after {
+  transition: border-color 0s, width 0.35s, height 0.15s;
+}
+
+/* Clone before with a new element for bottom-left */
+.heroSecondaryBtn .border-draw {
+  position: absolute;
+  box-sizing: border-box;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  border: 0 solid transparent;
+  border-radius: inherit;
+  bottom: 0;
+  right: 0;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  transition: border-color 0s, width 0.35s, height 0.15s;
+}
+
+/* Hover animation for draw effect */
+.heroSecondaryBtn:hover::after,
+.heroSecondaryBtn:hover .border-draw {
+  border-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.heroSecondaryBtn:hover::after {
+  transition-delay: 0.15s, 0.25s, 0s;
+}
+
+.heroSecondaryBtn:hover .border-draw {
+  transition-delay: 0s, 0.15s, 0.35s;
+}
+
+.primaryBtn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, var(--ekko-600), var(--accent-500));
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: transparent;
+  border: 2px solid;
+  border-image: linear-gradient(90deg, var(--ekko-600), var(--accent-500)) 1;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
 }

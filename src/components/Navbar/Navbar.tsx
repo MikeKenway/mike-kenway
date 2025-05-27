@@ -7,13 +7,16 @@ export default function Navbar() {
     <>
       <div className={styles.navWrapper}>
         <nav className={styles.nav}>
-          <div className={styles.logo}>
-            <Image
-              src='/images/hearticon.png'
-              alt='heart logo for mikekenway.com'
-              height={64}
-              width={64}
-            />
+          <div className={styles.logoWrapper}>
+            <div className={styles.logo}>
+              <Image
+                src='/images/hearticon.png'
+                alt='heart logo for mikekenway.com'
+                height={64}
+                width={64}
+              />
+            </div>
+            <div className={styles.logoName}>Mike Kenway</div>
           </div>
           <ul className={styles.navLinks}>
             <li>
@@ -28,12 +31,14 @@ export default function Navbar() {
             <li>
               <Link href='/cases'>Case Studies</Link>
             </li>
-            <Link
-              href='/contact'
-              className='primaryBtn'
-            >
-              Get in Touch
-            </Link>
+            <li>
+              <Link
+                href='/contact'
+                className='primaryBtn'
+              >
+                Get in Touch
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
