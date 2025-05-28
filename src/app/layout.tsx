@@ -26,20 +26,12 @@ const karla = Karla({
 });
 */
 
-// ✅ Shared variables
 const SITE_TITLE = 'Mike Kenway – Portfolio';
 const SITE_DESCRIPTION = 'UX Designer & Creative Director.';
 const OG_IMAGE = 'https://replace-me-later.com';
 const SITE_URL = 'https://mikekenway.com';
 
-interface LayoutProps {
-  children: ReactNode;
-  title?: string;
-}
-
-export default function Layout({
-  children,
-}: LayoutProps) {
+export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
       <head>

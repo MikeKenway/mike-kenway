@@ -1,7 +1,7 @@
 import styles from './Hero.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
-import Status from '../Status/Status'
+import Status from '../Status/Status';
 
 export default function Hero() {
   return (
@@ -22,7 +22,7 @@ export default function Hero() {
             momentum.
           </p>
           <p className={styles.heroText}>
-            My &quotbooks&quot are currently: <Status />
+            My &quot;books&quot; are currently: <Status />
           </p>
           <div className={styles.actions}>
             <Link
