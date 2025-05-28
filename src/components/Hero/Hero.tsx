@@ -9,7 +9,7 @@ export default function Hero() {
       <div className={styles.heroGrid}>
         <div className={styles.heroItem}>
           <div className={styles.heroTitleWrap}>
-            <h1 className={styles.heroTitle}>Hi! I'm Kenway.</h1>
+            <h1 className={styles.heroTitle}>Hi! I&rsquo;m Kenway.</h1>
 
             <p className={styles.heroSubtitle}>
               UX/UI Designer • Creative Director • Founder

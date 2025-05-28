@@ -1,33 +1,36 @@
 import { ReactNode } from 'react';
 import styles from './layout.module.css';
 import Navbar from '../components/Navbar/Navbar';
+
+/*
 import { Inter } from 'next/font/google';
 import { Roboto } from 'next/font/google';
 import { Karla } from 'next/font/google';
-
-// Define props for our Layout to accept children (page content)
-interface LayoutProps {
-  children: ReactNode;
-  title?: string;
-}
 
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
-});
+  });
+  
+  const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    display: 'swap',
+    });
+    
+    const karla = Karla({
+      subsets: ['latin'],
+      weight: ['400', '500', '600', '700'],
+      display: 'swap',
+      });
+      
+*/
 
-const roboto = Roboto({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-});
-
-const karla = Karla({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-});
+  interface LayoutProps {
+  children: ReactNode;
+    title?: string;
+  }
 
 export default function Layout({
   children,
@@ -35,6 +38,12 @@ export default function Layout({
 }: LayoutProps) {
   return (
     <html lang='en'>
+      <head>
+        <link
+          href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Karla:wght@400;500;600;700&display=swap'
+          rel='stylesheet'
+        />
+      </head>
       <body>
         <div className={styles.pageWrapper}>
           <Navbar />
