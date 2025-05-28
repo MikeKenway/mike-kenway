@@ -1,23 +1,21 @@
 .badge {
-    display: inline-flex;
-    align-items: center;
-    text-transform: uppercase;
-    background-color: var(--white);
-    color: var(--smoke-900);
-    padding: 6px 12px;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: .9rem;
-    margin-left: 1rem;
-  }
-  
-  .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #4caf50; 
-    border-radius: 50%;
-    margin-right: 8px;
-    box-shadow: 0 0 4px #4caf50; 
-  }
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: var(--white);
+  color: var(--smoke-900);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-left: 1rem;
+}
 
-  
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #4caf50;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 4px #4caf50;
+}

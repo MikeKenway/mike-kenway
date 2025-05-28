@@ -12,7 +12,7 @@ interface ServiceCardProps {
 
 export default function ServiceCard({
   title,
-  description,
+  description,               
   link,
   src,
   alt,

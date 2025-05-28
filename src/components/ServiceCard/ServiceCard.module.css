@@ -2,30 +2,32 @@
 .card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #e0e0e0; /* light border */
+    border: 1px solid transparent; /* light border */
     border-radius: 12px;
-    padding: 24px;
+    padding: 40px;
     text-align: center;
     max-width: 570px;
-    gap: 1rem;
     align-items: start;
-    color: #fff;
+    color: var(--white);
+    gap: 1.5rem;
+    background-color: var(--smoke-900);
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 12px;
   }
   
   .description {
     font-size: 1.5rem;
+    line-height: 2.5rem;
     margin-bottom: 16px;
     text-align: left;
   }
   
   /* Hover effects */
   .card:hover {
-    border-color: var(--accent-400);
+    border-color: var(--ekko-400);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: 150ms ease-in-out;
   }

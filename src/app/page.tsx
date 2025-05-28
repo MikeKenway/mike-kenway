@@ -7,6 +7,12 @@ export default function Home() {
   return (
     <main>
       <Hero />
+      <h2 className='heading-home'>What Can I Do for You?</h2>
+      <p className='container-small text-home'>
+        I love helping people bring their ideas to life. Whether you need
+        thoughtful design, clear strategy, or both, I’m here to help shape
+        projects that connect and make an impact.
+      </p>
       <div className='container flex-row'>
         <ServiceCard
           title='UX/UI Design'

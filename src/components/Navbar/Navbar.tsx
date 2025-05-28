@@ -28,16 +28,27 @@ export default function Navbar() {
             <li>
               <Link href='/resume'>Resume</Link>
             </li>
-            <li>
-              <Link href='/cases'>Case Studies</Link>
+            <li className='flex-row gap-1'>
+              <Link href='https://www.behance.net/mikekenway'
+                    target='_blank'
+              >
+                Case Studies
+              </Link>
+              <Image  src='/newtab.png'
+                alt=''
+                height={20}
+                width={20}
+              />
             </li>
             <li>
-              <Link
-                href='/contact'
-                className='primaryBtn'
-              >
-                Get in Touch
-              </Link>
+              <div>
+                <Link
+                  href='/contact'
+                  className={styles.navBtn}
+                >
+                  Get in Touch
+                </Link>
+              </div>
             </li>
           </ul>
         </nav>

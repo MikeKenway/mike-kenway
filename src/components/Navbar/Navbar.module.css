@@ -30,7 +30,7 @@
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 0;
   padding: 0;
 }
@@ -43,7 +43,7 @@
 
 }
 
-.navLinks a:hover:not(.primaryBtn) {
+.navLinks a:hover:not(.navBtn) {
   color: var(--ekko-300);
   transition: color 200ms ease-in-out;
 }
@@ -59,4 +59,17 @@
   color: var(--white);
   font-size: 36px;
   font-weight: 600;
+}
+
+.navBtn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background: linear-gradient(90deg, var(--ekko-600), var(--accent-500));
+  border: 2px transparent transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
 }

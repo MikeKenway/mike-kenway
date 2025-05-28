@@ -3,6 +3,7 @@ import styles from './layout.module.css';
 import Navbar from '../components/Navbar/Navbar';
 import { Inter } from 'next/font/google';
 import { Roboto } from 'next/font/google';
+import { Karla } from 'next/font/google';
 
 // Define props for our Layout to accept children (page content)
 interface LayoutProps {
@@ -17,6 +18,12 @@ const inter = Inter({
 });
 
 const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
+const karla = Karla({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
