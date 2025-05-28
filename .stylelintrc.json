@@ -1,0 +1,19 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "-webkit-mask",
+          "mask",
+          "-webkit-mask-composite"
+        ]
+      }
+    ],
+    "declaration-property-value-no-unknown": null,
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "custom-property-empty-line-before": null
+  }
+}

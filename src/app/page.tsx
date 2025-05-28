@@ -1,4 +1,3 @@
-import Layout from './layout';
 import '../app/globals.css';
 import Hero from '../components/Hero/Hero';
 import ServiceCard from '@/components/ServiceCard/ServiceCard';

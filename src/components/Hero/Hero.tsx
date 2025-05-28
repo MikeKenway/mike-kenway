@@ -22,7 +22,7 @@ export default function Hero() {
             momentum.
           </p>
           <p className={styles.heroText}>
-            My "books" are currently: <Status />
+            My &quotbooks&quot are currently: <Status />
           </p>
           <div className={styles.actions}>
             <Link

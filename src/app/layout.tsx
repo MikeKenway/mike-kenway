@@ -11,30 +11,34 @@ const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   display: 'swap',
-  });
-  
-  const roboto = Roboto({
-    subsets: ['latin'],
-    weight: ['400', '500', '600', '700'],
-    display: 'swap',
-    });
-    
-    const karla = Karla({
-      subsets: ['latin'],
-      weight: ['400', '500', '600', '700'],
-      display: 'swap',
-      });
-      
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
+
+const karla = Karla({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+});
 */
 
-  interface LayoutProps {
+// ✅ Shared variables
+const SITE_TITLE = 'Mike Kenway – Portfolio';
+const SITE_DESCRIPTION = 'UX Designer & Creative Director.';
+const OG_IMAGE = 'https://replace-me-later.com';
+const SITE_URL = 'https://mikekenway.com';
+
+interface LayoutProps {
   children: ReactNode;
-    title?: string;
-  }
+  title?: string;
+}
 
 export default function Layout({
   children,
-  title = 'Mike Kenway – Portfolio',
 }: LayoutProps) {
   return (
     <html lang='en'>
@@ -58,28 +62,28 @@ export default function Layout({
 }
 
 export const metadata = {
-  title: 'Mike Kenway – Portfolio',
-  description: 'UX Designer & Creative Director.',
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: 'Mike Kenway – Portfolio',
-    description: 'UX Designer & Creative Director.',
-    url: 'https://mikekenway.com',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
     siteName: 'Mike Kenway',
     images: [
       {
-        url: 'https://mikekenway.com/og-image.png',
+        url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Mike Kenway – Portfolio',
+        alt: SITE_TITLE,
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mike Kenway – Portfolio',
-    description: 'UX Designer & Creative Director.',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     creator: '@mikekenway',
-    images: ['https://mikekenway.com/og-image.png'],
+    images: [{ url: OG_IMAGE }],
   },
 };
