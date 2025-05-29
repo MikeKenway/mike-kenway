@@ -1,10 +1,11 @@
 import ServiceListCard from '@/components/ServiceListCard/ServiceListCard'
+import styles from '@/components/AdditionalServices/AdditionalServices.module.css'
 
 export default function AdditionalServices() {
   return (
     <section className='home-services'>
-      <h3>Additional Services</h3>
-      <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+      <h3 className={styles.andMore}>...and more!</h3>
+      <div className={styles.servicesLayout}>
         <ServiceListCard
           title='Design'
           services={[

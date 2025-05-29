@@ -1,0 +1,27 @@
+/* components/Footer/Footer.module.css */
+
+.footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #999;
+  }
+  
+  .links {
+    margin-bottom: 0.5rem;
+  }
+  
+  .links a {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: #999;
+  }
+  
+  .links a:hover {
+    text-decoration: underline;
+  }
+  
+  .copy {
+    margin-top: 0.5rem;
+  }
+  

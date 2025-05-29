@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import styles from './layout.module.css';
 import Navbar from '../components/Navbar/Navbar';
+import Footer from '@/components/Footer/Footer';
 
 /*
 import { Inter } from 'next/font/google';
@@ -44,9 +45,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className={styles.pageWrapper}>
           <Navbar />
           <main className={styles.main}>{children}</main>
-          <footer className={styles.footer}>
-            <p>© {new Date().getFullYear()} Mike Kenway</p>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>

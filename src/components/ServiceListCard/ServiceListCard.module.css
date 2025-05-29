@@ -10,7 +10,9 @@
   }
   
   .card:hover {
-    box-shadow: 0 8px 20px rgb(0 0 0 / 10%);
+    border-color: var(--ekko-400);
+    box-shadow: 0 0 5px 0 var(--ekko-400);
+    transition: 150ms ease-in-out;
   }
   
   .title {
