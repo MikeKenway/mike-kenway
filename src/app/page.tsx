@@ -18,7 +18,7 @@ export default function Home() {
           title='UX/UI Design'
           description='Designing beautiful, user-centered digital experiences that drive results.'
           link=''
-          src='/images/ux.jpg'
+          src='/images/ux.webp'
           alt=''
         />
         <ServiceCard
