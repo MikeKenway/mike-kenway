@@ -1,6 +1,7 @@
 import '../app/globals.css';
 import Hero from '../components/Hero/Hero';
 import ServiceCard from '@/components/ServiceCard/ServiceCard';
+import AdditionalServices from '@/components/AdditionalServices/AdditionalServices';
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
           alt=''
         />
       </div>
+      <AdditionalServices />
     </main>
   );
 }

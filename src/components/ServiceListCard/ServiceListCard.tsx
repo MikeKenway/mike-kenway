@@ -1,14 +1,14 @@
 import styles from './ServiceListCard.module.css';
 
-interface ServiceGroupCardProps {
+interface ServiceListCardProps {
   title: string;
   services: string[];
 }
 
-export default function ServiceGroupCard({
+export default function ServiceListCard({
   title,
   services,
-}: ServiceGroupCardProps) {
+}: ServiceListCardProps) {
   return (
     <div className={styles.card}>
       <h4 className={styles.title}>{title}</h4>

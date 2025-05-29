@@ -1,0 +1,38 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 250px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 20px rgb(0 0 0 / 10%);
+  }
+  
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--accent-600);
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2em;
+    position: relative;
+  }
+  
+  .list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-500);
+  }
+  
